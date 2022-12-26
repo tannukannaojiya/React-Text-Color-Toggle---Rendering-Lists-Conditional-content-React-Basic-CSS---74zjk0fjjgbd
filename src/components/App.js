@@ -3,11 +3,15 @@ import '../styles/App.css';
 
 const App = () => {
 //code here 
-const [setColor]=useState("red");
+const [changeColor,setChangeColor]=useState("false");
+
+const handleClick=()=>{
+  setChangeColor(!changeColor)
+}
   return (
     <div id="main">
-      <p className={'redColor'} >Newton School</p>
-      <button id='button' onClick={()=>setColor('blue')} >Change Style</button>
+      <p className={`${(changeColor===true)?'blueColor':'redColor'}`} >Newton School</p>
+      <button id='button' onClick={handleClick}>Change Style</button>
     </div>
   )
 }
