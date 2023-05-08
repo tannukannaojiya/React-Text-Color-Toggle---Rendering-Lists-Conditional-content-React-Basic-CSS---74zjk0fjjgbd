@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react'
+import React, {useState} from 'react'
 import '../styles/App.css';
 
 const App = () => {
@@ -10,7 +10,7 @@ const handleClick=()=>{
 
   return (
     <div id="main">
-      <p className={`${(changeColor===true)?'blueColor':'redColor'}`} >Newton School</p>
+      <p className={changeColor===true?'blueColor':'redColor'} >Newton School</p>
       <button id='button' onClick={handleClick}>Change Style</button>
     </div>
   )
